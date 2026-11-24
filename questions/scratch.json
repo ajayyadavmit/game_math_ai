@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "prompt": "In Scratch, what usually starts a project when the green flag is clicked?",
+      "options": [
+        "An event block",
+        "A forever loop",
+        "A variable",
+        "A costume"
+      ],
+      "answer": "An event block",
+      "hint": "Look for the block that waits for something to happen before running the script.",
+      "solution": "An event block such as 'when green flag clicked' starts a script in response to an action.",
+      "aiConnection": "AI tools also respond to events, such as a user submitting a prompt or a sensor receiving new data.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "Which Scratch control block repeats the blocks inside it forever?",
+      "options": [
+        "Forever",
+        "If then",
+        "Wait",
+        "Stop all"
+      ],
+      "answer": "Forever",
+      "hint": "The block's name describes repeating without a set end.",
+      "solution": "A forever loop continuously repeats its enclosed instructions until the project stops.",
+      "aiConnection": "Repeated steps are common in programs that continuously read input or update a display.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "In Scratch, a variable named 'score' is increased by 1 when a sprite touches a star. What does the variable do?",
+      "options": [
+        "Stores a value that can change",
+        "Plays a sound only",
+        "Changes the computer's screen",
+        "Deletes a sprite"
+      ],
+      "answer": "Stores a value that can change",
+      "hint": "A variable is like a labelled box that can hold a changing value.",
+      "solution": "The score variable stores the current score, and the script updates that value when the sprite touches a star.",
+      "aiConnection": "AI programs use variables to hold data such as scores, settings and intermediate calculation results.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "A Scratch script says 'if touching the edge, then turn around'. What programming idea does this use?",
+      "options": [
+        "A condition",
+        "A comment",
+        "A costume",
+        "A broadcast sound"
+      ],
+      "answer": "A condition",
+      "hint": "The script checks whether a statement is true before doing something.",
+      "solution": "An if block checks a condition and runs its instructions only when that condition is true.",
+      "aiConnection": "Conditions let programs make choices based on information, similar to rules that can be part of an AI workflow.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "Two Scratch scripts need to react to the same message. Which blocks can send and receive that message?",
+      "options": [
+        "Broadcast and when I receive",
+        "Move and turn",
+        "Set size and change effect",
+        "Wait and stop"
+      ],
+      "answer": "Broadcast and when I receive",
+      "hint": "One block announces a named message; another starts when that message arrives.",
+      "solution": "A broadcast block sends a message, and a 'when I receive' event can start another script.",
+      "aiConnection": "Breaking a project into communicating parts is similar to connecting separate stages in a larger data or AI system.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "A Scratch sprite asks a player a question and stores the reply in the 'answer' reporter. What kind of information is this?",
+      "options": [
+        "User input",
+        "A loop",
+        "A motor command",
+        "A costume effect"
+      ],
+      "answer": "User input",
+      "hint": "The information comes from a person interacting with the project.",
+      "solution": "The player types a response, which the project receives as input and can use in later blocks.",
+      "aiConnection": "AI applications accept inputs, but people should think carefully about what data they share and how it is used.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "A Scratch character walks in the wrong direction because the turn block has the wrong number. What should the learner do first?",
+      "options": [
+        "Test the script and adjust the block",
+        "Delete every sprite",
+        "Add more random blocks",
+        "Ignore the result"
+      ],
+      "answer": "Test the script and adjust the block",
+      "hint": "Use the result to find the block that needs correcting.",
+      "solution": "Run the script, observe the unexpected direction, and correct the turning value or block.",
+      "aiConnection": "Debugging by testing and revising is also important when checking how an AI system behaves.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    },
+    {
+      "prompt": "A project records how many times a sprite catches a falling apple. Which blocks make the most sense?",
+      "options": [
+        "A score variable and a change-by-1 block",
+        "A forever block that deletes the sprite",
+        "A costume change only",
+        "A stop-all block"
+      ],
+      "answer": "A score variable and a change-by-1 block",
+      "hint": "The project needs to remember a total and update it each time an apple is caught.",
+      "solution": "Store the total in a variable and increase it by one whenever the catching event occurs.",
+      "aiConnection": "Counting events is a simple example of turning observations into numerical data for analysis.",
+      "sourceTitle": "Scratch · Educators",
+      "sourceUrl": "https://www.scratchfoundation.org/learn/for-educators"
+    }
+  ]
+}

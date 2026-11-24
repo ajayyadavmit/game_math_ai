@@ -1,0 +1,154 @@
+{
+  "questions": [
+    {
+      "prompt": "What is the size (number of rows × columns) of [[2, 5, 1], [0, 3, 4]]?",
+      "options": [
+        "2 × 3",
+        "3 × 2",
+        "2 × 2",
+        "3 × 3"
+      ],
+      "answer": "2 × 3",
+      "hint": "Count the horizontal rows first, then count the entries across each row.",
+      "solution": "There are 2 rows, each with 3 entries, so the matrix is 2 × 3.",
+      "aiConnection": "A dataset can be stored as a matrix: rows might represent examples and columns might represent measured features.",
+      "sourceTitle": "Math is Fun · Introduction to Matrices",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-introduction.html"
+    },
+    {
+      "prompt": "Add [[2, 3], [−1, 4]] + [[5, −2], [6, 1]].",
+      "options": [
+        "[[7, 1], [5, 5]]",
+        "[[7, 5], [−7, 3]]",
+        "[[3, 5], [−7, 3]]",
+        "[[10, 1], [5, 4]]"
+      ],
+      "answer": "[[7, 1], [5, 5]]",
+      "hint": "Add entries in matching positions, one position at a time.",
+      "solution": "2+5=7, 3+(−2)=1, −1+6=5 and 4+1=5.",
+      "aiConnection": "Adding matrices combines values stored in the same positions, such as contributions from two sources of data.",
+      "sourceTitle": "Math is Fun · Matrix Addition",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-introduction.html"
+    },
+    {
+      "prompt": "Multiply every entry of [[1, −2], [3, 0]] by 3.",
+      "options": [
+        "[[3, −6], [9, 0]]",
+        "[[4, 1], [6, 3]]",
+        "[[3, −2], [9, 0]]",
+        "[[1, −6], [3, 0]]"
+      ],
+      "answer": "[[3, −6], [9, 0]]",
+      "hint": "Scalar multiplication means multiplying each entry by the same number.",
+      "solution": "3×1=3, 3×(−2)=−6, 3×3=9, and 3×0=0.",
+      "aiConnection": "Scaling a matrix changes the strength of every value together, similar to adjusting the scale of model weights.",
+      "sourceTitle": "Math is Fun · Matrix Operations",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-introduction.html"
+    },
+    {
+      "prompt": "Multiply [[1, 2], [3, 4]] by [[2, 0], [1, 2]] in that order.",
+      "options": [
+        "[[4, 4], [10, 8]]",
+        "[[2, 4], [6, 8]]",
+        "[[4, 2], [10, 6]]",
+        "[[3, 4], [7, 8]]"
+      ],
+      "answer": "[[4, 4], [10, 8]]",
+      "hint": "For each result entry, multiply a row of the first matrix by a column of the second, then add.",
+      "solution": "Top-left: 1×2+2×1=4; top-right: 1×0+2×2=4; bottom row gives 10 and 8.",
+      "aiConnection": "Matrix multiplication is a core operation in neural networks: it combines inputs with learned weights.",
+      "sourceTitle": "Math is Fun · Matrix Multiplication",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-multiplying.html"
+    },
+    {
+      "prompt": "Multiply [[2, 1], [0, 3]] by the column vector [4, 2].",
+      "options": [
+        "[10, 6]",
+        "[8, 6]",
+        "[10, 8]",
+        "[6, 10]"
+      ],
+      "answer": "[10, 6]",
+      "hint": "Multiply each matrix row by the column vector and add the products.",
+      "solution": "First entry: 2×4+1×2=10. Second entry: 0×4+3×2=6.",
+      "aiConnection": "This is the simple shape of a neural-network layer: input values are combined with weights to make new values.",
+      "sourceTitle": "Math is Fun · Matrix Multiplication",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-multiplying.html"
+    },
+    {
+      "prompt": "What is the determinant of [[4, 1], [2, 3]]?",
+      "options": [
+        "10",
+        "14",
+        "11",
+        "8"
+      ],
+      "answer": "10",
+      "hint": "For a 2 × 2 matrix [[a, b], [c, d]], calculate ad − bc.",
+      "solution": "4×3 − 1×2 = 12 − 2 = 10.",
+      "aiConnection": "Determinants tell us whether a square matrix transformation preserves area or collapses a dimension.",
+      "sourceTitle": "Math is Fun · Determinants",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-determinant.html"
+    },
+    {
+      "prompt": "Which size matrix can be multiplied by a 2 × 3 matrix to produce a 2 × 2 result?",
+      "options": [
+        "3 × 2",
+        "2 × 3",
+        "2 × 2",
+        "3 × 3"
+      ],
+      "answer": "3 × 2",
+      "hint": "The inner dimensions must match; the outer dimensions become the result size.",
+      "solution": "(2 × 3)(3 × 2) is defined because the inner 3s match, and its result is 2 × 2.",
+      "aiConnection": "Matching matrix dimensions is like checking that a layer's output can fit the next layer's input.",
+      "sourceTitle": "Math is Fun · Matrix Multiplication",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-multiplying.html"
+    },
+    {
+      "prompt": "What is [[1, 2], [3, 4]] + [[0, 0], [0, 0]]?",
+      "options": [
+        "[[1, 2], [3, 4]]",
+        "[[0, 0], [0, 0]]",
+        "[[1, 0], [3, 0]]",
+        "[[2, 4], [6, 8]]"
+      ],
+      "answer": "[[1, 2], [3, 4]]",
+      "hint": "The zero matrix has no effect when added to another matrix.",
+      "solution": "Adding zero to each corresponding entry leaves every original entry unchanged.",
+      "aiConnection": "The zero matrix is an additive identity, a useful reference point in equations and model updates.",
+      "sourceTitle": "Math is Fun · Matrix Operations",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-introduction.html"
+    },
+    {
+      "prompt": "What is [[3, 1], [2, 5]] − [[1, 4], [−2, 3]]?",
+      "options": [
+        "[[2, −3], [4, 2]]",
+        "[[4, 5], [0, 8]]",
+        "[[2, 3], [0, 2]]",
+        "[[−2, 3], [−4, −2]]"
+      ],
+      "answer": "[[2, −3], [4, 2]]",
+      "hint": "Subtract entries in matching positions. Be careful when subtracting a negative number.",
+      "solution": "3−1=2, 1−4=−3, 2−(−2)=4 and 5−3=2.",
+      "aiConnection": "A model can compare two matrices of values by subtracting them, for example to measure prediction error.",
+      "sourceTitle": "Math is Fun · Matrix Operations",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-introduction.html"
+    },
+    {
+      "prompt": "What does multiplying a 2 × 2 identity matrix by [[7, 1], [0, 3]] do?",
+      "options": [
+        "Leaves the matrix unchanged",
+        "Doubles every entry",
+        "Changes rows into columns",
+        "Makes every entry zero"
+      ],
+      "answer": "Leaves the matrix unchanged",
+      "hint": "The identity matrix plays the same role for matrix multiplication that 1 plays for ordinary multiplication.",
+      "solution": "Multiplying by the identity matrix leaves the original matrix unchanged.",
+      "aiConnection": "Identity transformations are a useful baseline: a layer that applies identity weights passes its input through unchanged.",
+      "sourceTitle": "Math is Fun · Introduction to Matrices",
+      "sourceUrl": "https://www.mathsisfun.com/algebra/matrix-introduction.html"
+    }
+  ]
+}

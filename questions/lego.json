@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "prompt": "A robot uses a distance sensor to detect a wall, then stops its motor. What is the sensor doing?",
+      "options": [
+        "Measuring information from the surroundings",
+        "Making the robot move",
+        "Saving a picture",
+        "Charging the battery"
+      ],
+      "answer": "Measuring information from the surroundings",
+      "hint": "The sensor gives the program information about something outside the robot.",
+      "solution": "A distance sensor measures how far away an object is and supplies that reading to the program.",
+      "aiConnection": "Sensors produce input data. Intelligent systems use data to decide what action to take.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "In a robot program, what is a motor mainly used for?",
+      "options": [
+        "Creating movement",
+        "Measuring colour",
+        "Storing a score",
+        "Displaying a web page"
+      ],
+      "answer": "Creating movement",
+      "hint": "A motor turns electrical energy into motion.",
+      "solution": "A motor drives a wheel, arm or other moving part when the program gives it a command.",
+      "aiConnection": "Motors are actuators: they let a robot act on the world after processing sensor information.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "A robot repeats 'move forward, check distance' until a wall is near. Which combination is needed?",
+      "options": [
+        "A loop and a condition",
+        "A picture and a costume",
+        "A variable and a sound only",
+        "A password and a message"
+      ],
+      "answer": "A loop and a condition",
+      "hint": "One part repeats the steps; another checks whether the stopping rule is met.",
+      "solution": "The loop repeats movement and sensing, while a condition checks whether the distance is below a chosen limit.",
+      "aiConnection": "AI-enabled robots also repeat a sense, process and act cycle as new input arrives.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "A colour sensor reads red, and the robot turns left only when red is detected. What does 'red is detected' act as?",
+      "options": [
+        "A condition",
+        "A motor",
+        "A wheel",
+        "A battery"
+      ],
+      "answer": "A condition",
+      "hint": "The program checks whether the sensor reading meets a rule.",
+      "solution": "The sensor reading is checked as a condition; if it is red, the program runs the turn instruction.",
+      "aiConnection": "Models and programs compare input values with rules or learned patterns to choose a response.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "A robot travels 20 cm, turns, then travels 20 cm again. What is the total distance travelled forward?",
+      "options": [
+        "40 cm",
+        "20 cm",
+        "60 cm",
+        "400 cm"
+      ],
+      "answer": "40 cm",
+      "hint": "Add the two forward movements. The turn does not add forward distance.",
+      "solution": "20 cm + 20 cm = 40 cm of forward travel.",
+      "aiConnection": "Arithmetic helps programmers estimate robot movement and compare intended actions with measured results.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "A robot follows a repeated path using a loop that runs 4 times. If each loop moves forward once, how many forward moves happen?",
+      "options": [
+        "4",
+        "1",
+        "8",
+        "0"
+      ],
+      "answer": "4",
+      "hint": "Each loop run makes one forward move.",
+      "solution": "One move per run × 4 runs = 4 forward moves.",
+      "aiConnection": "Counting repeated actions is a basic way to reason about how many operations a program performs.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "The robot does not stop at the line because its colour threshold is set incorrectly. What is the best next step?",
+      "options": [
+        "Test the sensor reading and adjust the threshold",
+        "Remove the sensor",
+        "Add an unrelated motor",
+        "Ignore the line"
+      ],
+      "answer": "Test the sensor reading and adjust the threshold",
+      "hint": "Check the measurement and the value the program uses to decide what counts as the line.",
+      "solution": "Test what the sensor reports on and off the line, then tune the threshold and test again.",
+      "aiConnection": "AI systems also need representative data and carefully checked thresholds so decisions match real conditions.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    },
+    {
+      "prompt": "Which sequence best describes a simple sensor-guided robot?",
+      "options": [
+        "Sense, process, act",
+        "Act, forget, guess",
+        "Draw, print, sleep",
+        "Charge, erase, stop"
+      ],
+      "answer": "Sense, process, act",
+      "hint": "The robot first gathers input, then its program decides, then a motor or other output responds.",
+      "solution": "A robot senses the environment, processes the reading in its program, and acts through an output such as a motor.",
+      "aiConnection": "This sense-process-act cycle is a useful way to understand how AI can connect observations to actions.",
+      "sourceTitle": "LEGO Education · SPIKE lessons",
+      "sourceUrl": "https://education.lego.com/en-us/lessons/"
+    }
+  ]
+}

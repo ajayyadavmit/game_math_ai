@@ -1,0 +1,87 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /classrooms/{classCode}/leaderboard/{studentId} {
+      function signedIn() {
+        return request.auth != null;
+      }
+
+      function ownsEntry() {
+        return signedIn() && resource.data.ownerUid == request.auth.uid;
+      }
+
+      function ownsEntryId() {
+        return signedIn()
+          && (studentId == request.auth.uid
+            || studentId.matches('^' + request.auth.uid + '_.*$'));
+      }
+
+      function validClassCode() {
+        return classCode.matches('^[A-Z0-9][A-Z0-9-]{3,15}$');
+      }
+
+      function validEntry() {
+        return request.resource.data.keys().hasAll([
+            'ownerUid',
+            'nickname',
+            'category',
+            'score',
+            'total',
+            'correct',
+            'bestStreak',
+            'createdAt'
+          ])
+          && request.resource.data.keys().hasOnly([
+            'ownerUid',
+            'nickname',
+            'category',
+            'score',
+            'total',
+            'correct',
+            'bestStreak',
+            'createdAt'
+          ])
+          && request.resource.data.ownerUid is string
+          && request.resource.data.ownerUid == request.auth.uid
+          && request.resource.data.nickname is string
+          && request.resource.data.nickname.matches('^[A-Za-z0-9][A-Za-z0-9 _-]{2,29}$')
+          && request.resource.data.category is string
+          && request.resource.data.category.matches('^[a-z][a-z0-9-]{0,31}$')
+          && request.resource.data.score is int
+          && request.resource.data.score >= 0
+          && request.resource.data.score <= 1000
+          && request.resource.data.total is int
+          && request.resource.data.total > 0
+          && request.resource.data.total <= 50
+          && request.resource.data.correct is int
+          && request.resource.data.correct >= 0
+          && request.resource.data.correct <= request.resource.data.total
+          && request.resource.data.bestStreak is int
+          && request.resource.data.bestStreak >= 0
+          && request.resource.data.bestStreak <= request.resource.data.total
+          && request.resource.data.createdAt == request.time;
+      }
+
+      allow get: if signedIn()
+        && validClassCode()
+        && (ownsEntryId() || ownsEntry());
+
+      allow list: if signedIn() && validClassCode();
+
+      allow create: if signedIn()
+        && validClassCode()
+        && ownsEntryId()
+        && validEntry();
+
+      allow update: if signedIn()
+        && validClassCode()
+        && ownsEntry()
+        && validEntry()
+        && request.resource.data.score >= resource.data.score;
+
+      allow delete: if signedIn()
+        && validClassCode()
+        && (ownsEntryId() || ownsEntry());
+    }
+  }
+}

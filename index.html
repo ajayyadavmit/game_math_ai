@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f8fc">
+    <meta name="description" content="An encouraging classroom quiz exploring maths, computing, robotics and AI concepts.">
+    <link rel="icon" href="data:,">
+    <title>Maths for AI — Learn by playing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="app.js"></script>
+  </head>
+  <body id="home">
+    <div id="site-header"></div>
+
+    <main>
+      <section class="app-shell" aria-label="Maths quiz">
+        <div class="app-topline">
+          <span class="topline-label"><span class="sparkle" aria-hidden="true">✦</span> YOUR PRACTICE SPACE</span>
+          <span class="cloud-status" id="cloud-status" role="status">Saving on this device</span>
+        </div>
+
+        <section id="setup-view" class="view setup-view" aria-labelledby="setup-title">
+          <div class="setup-layout">
+            <div class="setup-main-column">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow small-eyebrow">READY WHEN YOU ARE</p>
+                  <h2 id="setup-title">Choose a topic</h2>
+                </div>
+                <span class="session-length" id="session-length">8 questions · 30 sec each</span>
+              </div>
+
+              <div class="topic-grid" id="topic-grid" role="group" aria-label="Quiz topic"></div>
+
+              <div class="ai-note">
+                <span class="ai-note-icon" aria-hidden="true">✧</span>
+                <p><strong id="learning-note-title">Why maths for AI?</strong> <span id="learning-note">Explore how maths, patterns and clear instructions help people understand the ideas behind AI.</span></p>
+              </div>
+              <div class="setup-actions">
+                <span class="encouragement" id="setup-encouragement">No pressure. Every answer is a chance to learn.</span>
+                <button class="button button-primary" id="start-button" type="button" disabled>Start learning <span aria-hidden="true">→</span></button>
+              </div>
+              <p class="error-message" id="setup-error" role="alert" hidden></p>
+            </div>
+
+            <aside class="classroom-panel" id="leaderboard-panel" aria-labelledby="classroom-title">
+              <div class="classroom-heading">
+                <div>
+                  <p class="eyebrow small-eyebrow">FRIENDLY CLASSROOM CHALLENGE</p>
+                  <h3 id="classroom-title">Join your class leaderboard</h3>
+                </div>
+                <span class="leaderboard-badge">TOP 10</span>
+              </div>
+              <div class="identity-fields">
+                <label>
+                  <span id="nickname-label">Your nickname</span>
+                  <input id="nickname-input" name="nickname" autocomplete="nickname" maxlength="18">
+                </label>
+                <label>
+                  <span><span id="class-code-label">Class code</span> <span class="optional-note">(shared by your teacher)</span></span>
+                  <input id="class-code-input" name="class-code" autocomplete="off" maxlength="16" autocapitalize="characters" placeholder="e.g. MATHS-1">
+                </label>
+              </div>
+              <p class="leaderboard-privacy"></p>
+              <p class="leaderboard-status" id="leaderboard-status" role="status">Anonymous class leaderboard needs Firebase setup.</p>
+              <ol class="leaderboard-list" id="leaderboard-list" aria-label="Class leaderboard"></ol>
+            </aside>
+          </div>
+        </section>
+
+        <section id="quiz-view" class="view quiz-view" aria-labelledby="question-text" hidden>
+          <div class="quiz-meta">
+            <div class="quiz-meta-left">
+              <span class="topic-chip" id="topic-chip">MIXED PRACTICE</span>
+              <span class="question-count" id="question-count">QUESTION 1 OF 8</span>
+            </div>
+            <div class="quiz-meta-right">
+              <span class="streak-pill" id="streak-pill" aria-live="polite">🔥 <span id="streak-value">0</span> streak</span>
+              <span class="score-pill"><span aria-hidden="true">✦</span> <span id="score-value">0</span> pts</span>
+            </div>
+          </div>
+          <p class="streak-explanation" id="streak-explanation"></p>
+          <p class="encouragement quiz-encouragement" id="quiz-encouragement" role="status"></p>
+          <div class="progress-track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+            <span class="progress-fill" id="progress-fill"></span>
+          </div>
+
+          <div class="timer-row">
+            <span class="timer-caption">TIME TO THINK</span>
+            <div class="timer-track" role="progressbar" aria-label="Time remaining" aria-valuemin="0" aria-valuemax="30" aria-valuenow="30">
+              <span class="timer-fill" id="timer-fill"></span>
+            </div>
+            <span class="timer-value" id="timer-value" aria-live="off">30</span>
+          </div>
+
+          <div class="question-area">
+            <p class="question-label" id="question-label">ARITHMETIC</p>
+            <h2 class="question-text" id="question-text" tabindex="-1"></h2>
+            <div class="answer-grid" id="answer-grid" role="group" aria-label="Answer choices"></div>
+          </div>
+
+          <section class="feedback-panel" id="feedback-panel" aria-live="polite" hidden>
+            <div class="feedback-heading">
+              <span class="feedback-mark" id="feedback-mark" aria-hidden="true"></span>
+              <div>
+                <p class="feedback-kicker" id="feedback-kicker"></p>
+                <h3 id="feedback-title"></h3>
+              </div>
+            </div>
+            <p class="feedback-hint" id="feedback-hint"></p>
+            <p class="feedback-solution" id="feedback-solution"></p>
+            <p class="ai-connection" id="ai-connection"></p>
+            <a class="source-link" id="source-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+            <button class="button button-primary continue-button" id="continue-button" type="button">Next question <span aria-hidden="true">→</span></button>
+          </section>
+        </section>
+
+        <section id="results-view" class="view results-view" aria-labelledby="results-title" hidden>
+          <div class="results-art" aria-hidden="true">✦</div>
+          <p class="eyebrow small-eyebrow">SESSION COMPLETE</p>
+          <h2 id="results-title" tabindex="-1">Look at you go.</h2>
+          <p class="results-subtitle" id="results-subtitle">You showed up and learned something new.</p>
+          <div class="results-stats">
+            <div class="result-stat"><strong id="final-score">0</strong><span>POINTS</span></div>
+            <div class="result-stat"><strong id="final-correct">0/8</strong><span>CORRECT</span></div>
+            <div class="result-stat"><strong id="final-accuracy">0%</strong><span>ACCURACY</span></div>
+            <div class="result-stat"><strong id="final-streak">0</strong><span>BEST STREAK</span></div>
+          </div>
+          <p class="best-score" id="best-score"></p>
+          <p class="cloud-result" id="cloud-result" role="status"></p>
+          <div class="results-actions">
+            <button class="button button-primary" id="again-button" type="button">Play again <span aria-hidden="true">↻</span></button>
+            <button class="button button-secondary" id="topics-button" type="button">Choose another topic</button>
+          </div>
+        </section>
+      </section>
+
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

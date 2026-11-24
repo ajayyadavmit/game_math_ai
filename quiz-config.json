@@ -1,0 +1,128 @@
+{
+  "settings": {
+    "questionCount": 2,
+    "secondsPerQuestion": 30,
+    "pointsPerCorrect": 10
+  },
+  "appearance": {
+    "quizTopicFontSizePx": 14,
+    "quizDetailFontSizePx": 13,
+    "quizScoreFontSizePx": 15,
+    "quizStreakFontSizePx": 14,
+    "quizMetaGapPx": 12,
+    "quizQuestionFontSizePx": 24,
+    "quizAnswerFontSizePx": 16
+  },
+  "copy": {
+    "introText": "Build confidence with maths and computing ideas behind AI, one question at a time.",
+    "learningNoteTitle": "Why maths and computing for AI?",
+    "learningNote": "Explore how maths, patterns and clear instructions help people understand the ideas behind AI.",
+    "setupEncouragement": "No pressure. Every answer is a chance to learn.",
+    "startButton": "Start learning",
+    "homeConfirm": "Go back to the home screen? Your current quiz answers, score and streak will be lost.",
+    "streakDescription": "A streak is your number of correct answers in a row. It celebrates steady learning; a mistake is just a fresh start.",
+    "streakHelp": "A streak counts correct answers in a row. Keep learning; one mistake is never the end of the game.",
+    "nicknameLabel": "Your nickname",
+    "classCodeLabel": "Class code",
+    "leaderboardTitle": "Join your class leaderboard",
+    "leaderboardIntro": "Friendly classroom challenge",
+    "leaderboardEmpty": "No scores yet. Be the first to play!",
+    "leaderboardDisabled": "Class scores need a connected Firebase project. Add the Firebase web settings, enable Anonymous sign-in, and publish firestore.rules to share scores.",
+    "leaderboardPrivacy": "Use a nickname, not a real name. Enter the same teacher-provided class code as your classmates; it selects a shared board, not a password.",
+    "leaderboardNotReady": "Enter your nickname and your teacher's class code to join the board.",
+    "leaderboardSaved": "Your best score is on the class leaderboard!",
+    "leaderboardUpdated": "Your class leaderboard is up to date.",
+    "nicknameSaved": "Nickname saved on this device.",
+    "nicknameInvalid": "Use {min}–{max} letters, numbers, spaces, hyphens or underscores for your nickname.",
+    "classCodeInvalid": "Ask your teacher for a class code with {min}–{max} letters, numbers or hyphens.",
+    "localLeaderboard": "Firebase is not connected; this session will stay on this device.",
+    "leaderboardError": "The leaderboard could not be loaded. Your quiz can still continue."
+  },
+  "experience": {
+    "allowMixed": true,
+    "mixedTopic": {
+      "label": "A bit of everything",
+      "description": "Mix maths, unplugged, Scratch and LEGO topics"
+    },
+    "randomizeQuestions": true,
+    "randomizeOptions": true,
+    "streak": {
+      "enabled": true,
+      "bonusEvery": 3,
+      "bonusPoints": 5
+    },
+    "streakMinimumForMessage": 2,
+    "messages": {
+      "correct": "Nice work! +{points} points.",
+      "streak": "You're on a {streak}-answer streak! Keep going.",
+      "streakBonus": "You're on a {streak}-answer streak! +{points} points and +{bonus} bonus points.",
+      "incorrect": "Good try—use the clue to spot the idea, then keep going.",
+      "timeout": "Time's up. The answer is {answer}; take a moment with the clue.",
+      "resultPerfect": "Brilliant work — you have a strong grasp of these ideas.",
+      "resultGood": "Every question you tried helped strengthen your thinking.",
+      "resultKeepGoing": "You showed up and learned something new. Keep practising and it will click."
+    }
+  },
+  "leaderboard": {
+    "enabled": true,
+    "topCount": 10,
+    "defaultClassCode": "MATHS-2026-A",
+    "nicknameMinLength": 3,
+    "nicknameMaxLength": 18,
+    "classCodeMinLength": 4,
+    "classCodeMaxLength": 16
+  },
+  "branding": {
+    "siteName": "Maths for AI",
+    "brandText": "math/ai",
+    "logoMark": "∑",
+    "tagline": "A little maths. A lot of possibility.",
+    "eyebrow": "AI MATHEMATICS · LEARN BY PLAYING",
+    "headlineLine1": "Maths that makes",
+    "headlineLine2": "AI",
+    "headlineHighlight": "make sense.",
+    "heroImageUrl": "",
+    "heroImageAlt": "Event-themed learning illustration",
+    "footerIcon": "✳",
+    "footerMessage": "Made for curious minds — no maths anxiety allowed.",
+    "footerTagline": "LEARN · TRY · GROW",
+    "footerClosing": "Small steps build big ideas.",
+    "theme": {
+      "primary": "#6b5ce7",
+      "primaryDark": "#5546ce",
+      "page": "#f7f8fc"
+    }
+  },
+  "categories": {
+    "arithmetic": {
+      "label": "Arithmetic",
+      "icon": "＋",
+      "description": "Operations, fractions & number sense",
+      "questionFile": "questions/arithmetic.json"
+    },
+    "matrices": {
+      "label": "Matrices",
+      "icon": "▦",
+      "description": "Arrays, transformations & AI weights",
+      "questionFile": "questions/matrices.json"
+    },
+    "unplugged": {
+      "label": "Unplugged computing",
+      "icon": "🧩",
+      "description": "Learn algorithms and data patterns without a screen",
+      "questionFile": "questions/unplugged.json"
+    },
+    "scratch": {
+      "label": "Scratch programming",
+      "icon": "🐱",
+      "description": "Explore events, loops, logic and variables",
+      "questionFile": "questions/scratch.json"
+    },
+    "lego": {
+      "label": "LEGO robotics",
+      "icon": "🤖",
+      "description": "Connect sensors, motors and robot decisions",
+      "questionFile": "questions/lego.json"
+    }
+  }
+}

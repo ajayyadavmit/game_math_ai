@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "prompt": "In an unplugged activity, learners sort number cards by following a written sequence of steps. What is that sequence?",
+      "options": [
+        "An algorithm",
+        "A screen",
+        "A sensor",
+        "A password"
+      ],
+      "answer": "An algorithm",
+      "hint": "Think of a clear, repeatable set of instructions for solving a problem.",
+      "solution": "An algorithm is an ordered set of steps that can be followed to solve a problem.",
+      "aiConnection": "AI methods are built from algorithms: instructions for learning from data or producing an answer.",
+      "sourceTitle": "CS Unplugged · Learning computer science without a computer",
+      "sourceUrl": "https://www.csunplugged.org/en/"
+    },
+    {
+      "prompt": "A class breaks the task 'organise a school fair' into booking stalls, planning signs and making a timetable. Which problem-solving idea is this?",
+      "options": [
+        "Decomposition",
+        "Encryption",
+        "Random guessing",
+        "Multiplication"
+      ],
+      "answer": "Decomposition",
+      "hint": "The class has divided one large problem into smaller, easier parts.",
+      "solution": "Decomposition means breaking a complex problem into smaller tasks that are easier to solve.",
+      "aiConnection": "AI projects also break big goals into smaller steps, such as collecting examples, finding patterns and checking predictions.",
+      "sourceTitle": "CS Unplugged · Computational thinking",
+      "sourceUrl": "https://www.csunplugged.org/en/"
+    },
+    {
+      "prompt": "A person spots that 2, 4, 6, 8 increases by 2 each time. What are they identifying?",
+      "options": [
+        "A pattern",
+        "A bug",
+        "A sensor",
+        "A variable"
+      ],
+      "answer": "A pattern",
+      "hint": "Look for what stays the same as the numbers change.",
+      "solution": "Each number is 2 more than the previous one, so the repeating rule is the pattern.",
+      "aiConnection": "Machine learning looks for patterns in examples; people still need to decide whether a pattern is useful or fair.",
+      "sourceTitle": "CS Unplugged · Learning computer science without a computer",
+      "sourceUrl": "https://www.csunplugged.org/en/"
+    },
+    {
+      "prompt": "A human follows sorting instructions, notices the largest card is already in place, and changes a step to fix the process. What is the learner doing?",
+      "options": [
+        "Debugging",
+        "Training a sensor",
+        "Making a copy",
+        "Logging in"
+      ],
+      "answer": "Debugging",
+      "hint": "This word means finding and correcting a problem in instructions or a program.",
+      "solution": "Debugging is checking a process, finding what went wrong and correcting it.",
+      "aiConnection": "Testing and debugging help teams find mistakes in the code and data used to build AI systems.",
+      "sourceTitle": "CS Unplugged · Learning computer science without a computer",
+      "sourceUrl": "https://www.csunplugged.org/en/"
+    },
+    {
+      "prompt": "In a paper-based binary activity, which two symbols are used to represent numbers in base two?",
+      "options": [
+        "0 and 1",
+        "1 and 2",
+        "A and B",
+        "0 and 9"
+      ],
+      "answer": "0 and 1",
+      "hint": "Binary has only two possible digit values.",
+      "solution": "Base two uses the digits 0 and 1. Groups of these digits can encode information.",
+      "aiConnection": "Computers store and process information as bits; AI data is represented in forms computers can calculate with.",
+      "sourceTitle": "CS Unplugged · Binary numbers",
+      "sourceUrl": "https://www.csunplugged.org/en/topics/binary-numbers/"
+    },
+    {
+      "prompt": "A sorting network compares pairs of values and swaps them if they are in the wrong order. What does it demonstrate?",
+      "options": [
+        "A sorting algorithm",
+        "A drawing tool",
+        "A battery circuit",
+        "A random sample"
+      ],
+      "answer": "A sorting algorithm",
+      "hint": "The compare-and-swap rule is a procedure for arranging values.",
+      "solution": "A sorting network arranges values through a planned sequence of comparisons and swaps.",
+      "aiConnection": "Organising data makes it easier for people and programs to search, compare and analyse examples.",
+      "sourceTitle": "CS Unplugged · Sorting algorithms",
+      "sourceUrl": "https://www.csunplugged.org/en/topics/sorting-networks/"
+    },
+    {
+      "prompt": "A paper activity groups animal cards by features such as 'has wings' and 'lives in water'. What do the features represent?",
+      "options": [
+        "Data attributes",
+        "Motor speeds",
+        "Program errors",
+        "Passwords"
+      ],
+      "answer": "Data attributes",
+      "hint": "They are properties recorded about each example.",
+      "solution": "Attributes are properties or features used to describe and compare examples.",
+      "aiConnection": "An AI model can use input features to make a prediction, so choosing relevant, representative features matters.",
+      "sourceTitle": "CS Unplugged · Learning computer science without a computer",
+      "sourceUrl": "https://www.csunplugged.org/en/"
+    },
+    {
+      "prompt": "A class tests a set of instructions using only three cards before trying it on the whole deck. What is a good reason?",
+      "options": [
+        "A small test can reveal mistakes early",
+        "Small tests make every answer correct",
+        "The deck is no longer data",
+        "Instructions cannot be tested"
+      ],
+      "answer": "A small test can reveal mistakes early",
+      "hint": "Testing on a small example is a quick way to check whether the steps behave as expected.",
+      "solution": "A small test case makes it easier to notice and correct an error before running a longer process.",
+      "aiConnection": "AI systems should be tested on carefully chosen examples before people rely on their predictions.",
+      "sourceTitle": "CS Unplugged · Learning computer science without a computer",
+      "sourceUrl": "https://www.csunplugged.org/en/"
+    }
+  ]
+}
