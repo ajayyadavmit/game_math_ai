@@ -5,12 +5,12 @@
     "pointsPerCorrect": 5
   },
   "appearance": {
-    "quizTopicFontSizePx": 18,
-    "quizDetailFontSizePx": 18,
-    "quizScoreFontSizePx": 18,
-    "quizStreakFontSizePx": 14,
+    "quizTopicFontSizePx": 12,
+    "quizDetailFontSizePx": 16,
+    "quizScoreFontSizePx": 16,
+    "quizStreakFontSizePx": 12,
     "quizMetaGapPx": 12,
-    "quizQuestionFontSizePx": 24,
+    "quizQuestionFontSizePx": 20,
     "quizAnswerFontSizePx": 16
   },
   "copy": {

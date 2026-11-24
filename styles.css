@@ -10,8 +10,9 @@
   --page: #f7f8fc;
   --green: #2f9b76;
   --red: #d76768;
+  --supporting-copy-font-size: 14px;
   --quiz-topic-font-size: 14px;
-  --quiz-detail-font-size: 13px;
+  --quiz-detail-font-size: 14px;
   --quiz-score-font-size: 15px;
   --quiz-streak-font-size: 14px;
   --quiz-meta-gap: 0.75rem;
@@ -126,7 +127,7 @@ h1, h2, h3 { font-family: "Avenir Next", "Segoe UI", sans-serif; }
 
 h1 {
   margin-bottom: 12px;
-  font-size: clamp(36px, 5vw, 52px);
+  font-size: clamp(32px, 5vw, 42px);
   line-height: 1.12;
   letter-spacing: -2.7px;
   font-weight: 800;
@@ -207,6 +208,7 @@ h1 {
   border-bottom: 1px solid #f0f0f5;
 }
 
+.app-topline-status { display: flex; align-items: center; gap: 14px; }
 .topline-label, .cloud-status, .question-count, .timer-caption, .question-label, .result-stat span, .footer-tag {
   font-size: 9px;
   font-weight: 700;
@@ -216,6 +218,7 @@ h1 {
 .topline-label { color: #666b83; }
 .sparkle { margin-right: 5px; color: #d7a348; font-size: 12px; }
 .cloud-status { color: #768178; letter-spacing: .3px; text-transform: none; }
+.display-name { color: #584bbd; font-size: 10px; font-weight: 700; }
 .view { padding-top: 23px; }
 .setup-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(280px, .85fr); align-items: start; gap: 20px; }
 .setup-main-column { min-width: 0; }
@@ -250,7 +253,7 @@ h2 { margin-bottom: 0; font-size: 22px; letter-spacing: -.75px; }
 .mixed-icon { background: #fbf3e6; color: #ce9639; }
 .topic-copy { display: grid; gap: 5px; padding-top: 1px; }
 .topic-copy strong { font-family: "Avenir Next", "Segoe UI", sans-serif; font-size: 12px; }
-.topic-copy span { max-width: 145px; color: #81869a; font-size: 10px; line-height: 1.45; }
+.topic-copy span { max-width: 145px; color: #81869a; font-size: var(--supporting-copy-font-size); line-height: 1.45; }
 .topic-arrow { position: absolute; top: 11px; right: 11px; color: #b6b8c5; font-size: 13px; }
 .ai-note { display: flex; align-items: flex-start; gap: 10px; margin: 15px 0 17px; padding: 12px 14px; border-radius: 10px; background: #f8f7ff; }
 .ai-note-icon { color: var(--purple); font-size: 16px; }
@@ -283,7 +286,7 @@ h2 { margin-bottom: 0; font-size: 22px; letter-spacing: -.75px; }
 .leaderboard-name { overflow: hidden; color: #444a61; font-weight: 700; text-overflow: ellipsis; white-space: nowrap; }
 .leaderboard-streak { color: #9a682e; font-size: 10px; text-align: center; }
 .leaderboard-score { color: #584bbd; font-size: 10px; text-align: right; white-space: nowrap; }
-.streak-explanation { margin: -4px 0 8px; color: #737990; font-size: 10px; line-height: 1.45; }
+.streak-explanation { margin: -4px 0 8px; color: #737990; font-size: var(--supporting-copy-font-size); line-height: 1.45; }
 
 .quiz-view { max-width: 720px; margin: 0 auto; }
 .quiz-meta, .quiz-meta-left { display: flex; align-items: center; }
@@ -383,6 +386,7 @@ h2 { margin-bottom: 0; font-size: 22px; letter-spacing: -.75px; }
   h1 { font-size: 39px; }
   .app-shell { padding-right: 13px; padding-left: 13px; }
   .app-topline { align-items: flex-start; }
+  .app-topline-status { flex-wrap: wrap; justify-content: flex-end; gap: 5px 10px; }
   .cloud-status { max-width: 140px; text-align: right; line-height: 1.4; }
   .section-heading { align-items: flex-start; gap: 8px; }
   .session-length { margin-top: 5px; white-space: nowrap; font-size: 9px; }

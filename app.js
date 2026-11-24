@@ -22,6 +22,7 @@ const elements = {
   topicGrid: document.querySelector("#topic-grid"),
   topicButtons: [],
   sessionLength: document.querySelector("#session-length"),
+  displayName: document.querySelector("#display-name"),
   cloudStatus: document.querySelector("#cloud-status"),
   topicChip: document.querySelector("#topic-chip"),
   questionCount: document.querySelector("#question-count"),
@@ -568,6 +569,8 @@ function startQuiz() {
   state.currentStreak = 0;
   state.bestStreak = 0;
   state.sessionStartedAt = Date.now();
+  elements.displayName.textContent = `Display name: ${state.nickname}`;
+  elements.displayName.hidden = false;
   setView("quiz");
   renderQuestion();
 }
@@ -799,6 +802,7 @@ function finishQuiz() {
 function resetToSetup() {
   clearInterval(state.timerId);
   setView("setup");
+  elements.displayName.hidden = true;
   elements.setupError.hidden = true;
 }
 
