@@ -215,6 +215,13 @@ Follow these steps to enable a shared class board:
 
 1. **Set up Firebase once for the app.** In the [Firebase Console](https://console.firebase.google.com/), create/select a project, add a Web app, create a Cloud Firestore database, and enable **Authentication → Sign-in method → Anonymous**.
 2. **Connect this static website to Firebase.** Add your local and GitHub Pages hostnames in **Authentication → Settings → Authorized domains**. Copy the Web app configuration values into [`firebase-config.json`](./firebase-config.json) (`apiKey`, `authDomain`, `projectId`, `appId`) and change `"enabled": false` to `"enabled": true`. These web app values identify the Firebase project; they are not the class code.
+
+2.1. In Project settings → General, register a Web app and copy its Firebase web configuration into firebase-config.js.
+2.2. These web config values identify the Firebase project; they are not server secrets. Keep Firestore locked down with the rules below.
+2.3. In Authentication → Sign-in method, enable Anonymous sign-in.
+2.4. In Authentication → Settings → Authorized domains, add localhost for local tests and your GitHub Pages domain (for example, your-name.github.io) for the deployed game.
+2.5. Create a Cloud Firestore database. Open Firestore Database → Rules, replace the starter rules with the contents of firestore.rules, and publish them.
+
 3. **Publish the database rules.** In **Firestore Database → Rules**, publish the contents of [`firestore.rules`](./firestore.rules) to the same Firebase project. The rules permit valid codes and limit writes to each anonymous user's own score document.
 4. **Choose a code for each class.** Make up a memorable code such as `MATHS-2026-A`. Keep it 4–16 characters, using only A–Z, 0–9, and hyphens. Do not treat it as a secret: anyone who knows the code can view/join that board.
 5. **Choose how students receive the code:**

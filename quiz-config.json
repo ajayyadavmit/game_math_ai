@@ -1,13 +1,13 @@
 {
   "settings": {
-    "questionCount": 2,
-    "secondsPerQuestion": 30,
-    "pointsPerCorrect": 10
+    "questionCount": 8,
+    "secondsPerQuestion": 20,
+    "pointsPerCorrect": 5
   },
   "appearance": {
-    "quizTopicFontSizePx": 14,
-    "quizDetailFontSizePx": 13,
-    "quizScoreFontSizePx": 15,
+    "quizTopicFontSizePx": 18,
+    "quizDetailFontSizePx": 18,
+    "quizScoreFontSizePx": 18,
     "quizStreakFontSizePx": 14,
     "quizMetaGapPx": 12,
     "quizQuestionFontSizePx": 24,
@@ -74,7 +74,7 @@
   },
   "branding": {
     "siteName": "Maths for AI",
-    "brandText": "math/ai",
+    "brandText": "Quiz",
     "logoMark": "∑",
     "tagline": "A little maths. A lot of possibility.",
     "eyebrow": "AI MATHEMATICS · LEARN BY PLAYING",
